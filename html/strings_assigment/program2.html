@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>string chop</title>
+    </head>
+    <body>
+        input string : <input id = "str" type = "text" >;
+        input k : <input id = "k" type = "number">;
+        <button id = "btn" >chop</button>
+        <script>
+            var b = document.getElementById("btn");
+            b.addEventListener('click',function(){
+                var s = document.getElementById("str").value;
+                var k = document.getElementById("k").value;
+                var t = k;
+                console.log(s,k);
+                var ts = "";
+                for(var i=0;i<s.length;i++)
+                {
+                    if(t == 0)
+                    {
+                        console.log(ts);
+                        ts = "";
+                        t = k;
+                    }
+                    ts = ts + s[i];
+                    t--;
+                }
+                console.log(ts);
+            })
+        </script>
+    </body>
+</html>

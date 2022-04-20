@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <tile>Program1 </tile>
+    </head>
+    <body>
+        input string : <input type = "text" id = "str" name = "inputstring" >
+        <button id = "btn" onclick="return sourav()" >find</button>
+        <script>
+            function sourav(){
+                var s = document.getElementById("str").value;
+                console.log(s);
+                var vow = "aeiou";
+                for(var i = 0;i<s.length;i++)
+                {
+                    for(var j = 0;j<vow.length;j++)
+                    {
+                        if(vow[j] == s[i])
+                        {
+                            console.log(i);
+                            return  true;
+                        }
+                    }
+                }
+                return  true;
+            }
+            
+        </script>
+    </body>
+</html>

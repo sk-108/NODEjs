@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>date</title>
+    </head>
+    <body>
+        Input date : <input type = "text" id="dt"><br>
+        <button onclick="myfunction()">get</button>
+        <script>
+            function myfunction()
+            {
+                var t = document.getElementById("dt").value;
+                var date = new Date(t);
+                var d = new Date();
+                console.log(date.getDate());
+                console.log(d.getDate());
+                console.log(d.getDay());
+                console.log(d.getMonth());
+                console.log(d.getFullYear());
+                console.log(d.getHours());
+                console.log(d.getMilliseconds());
+                console.log(d.getMinutes());
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title> sourav timer </title>
+    </head>
+    <body>
+        <h1>sourav timer</h1>
+        <button onclick = "start()">Start</button>
+        <br>
+        <button onclick = "stop()">stop</button>
+        <br>
+        <p id = "countDown"></p>
+        <script>
+            let minute = 10;
+            let time = minute*60;
+            var cd = document.getElementById("countDown");
+            let v;
+            console.log("get")
+            function start()
+            {
+                
+                v = setInterval(countdown,1000);
+            }
+            function stop()
+            {
+                console.log("haribol");
+                clearInterval(v);
+            }
+            function countdown()
+            {
+                let minute =  Math.floor(time/60);
+                let second = time%60;
+                cd.innerHTML = `${minute}: ${second}`;
+                console.log(time);    
+                time--;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>convert lowercase to uppercase </title>
+    </head>
+    <body>
+        input string : <input id = "str" type = "type"><br>
+        <button id = "btn" onclick = "return sourav();">convert</button>
+        <script>
+            function sourav()
+            {
+                var s = document.getElementById("str").value;
+                console.log(s);
+                var sk = "";
+                for(var i=0;i<s.length;i++)
+                {
+                    var ch = s.charAt(i);
+                    var asc = s.charCodeAt(i);
+                    if(asc >= 97 && asc <=122 )
+                    {
+                        sk = sk + s[i].toUpperCase();
+                    }
+                    else{
+                        sk = sk + s[i].toLowerCase();
+                    }
+                }
+                console.log(sk);
+            }
+        </script>
+
+    </body>
+</html>

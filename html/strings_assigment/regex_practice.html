@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>regex practice</title>
+    </head>
+    <body>
+        <form onsubmit="return sourav()">
+            name : <input type = "text" id = "name"><br>
+            phone_no : <input type = "text" id = "no"><br>
+            password : <input type = "password" id = "pass"><br>
+            confirm password : <input type = "password" id = "cpass">
+            <input type = "submit">
+        </form>
+        <p id = ""></p>
+        <script>
+            function sourav()
+            {
+                var name = document.getElementById("name").value;
+                var phone_no = document.getElementById("no").value;
+                var password = document.getElementById("pass").value;
+                var cpassword = document.getElementById("cpass").value;
+
+                var regex = /[a-zA-Z]$/;
+                if(name = "" || !regex.test(name))
+                {
+                    alert("enter valid name");
+                    name.focus();
+                    return false;
+                }
+                
+                regex = /[0-9]{10}$/;
+                if(phone_no = "" || regex.test(phone_no) == false)
+                {
+                    alert("enter valid phone no");
+                    phone.focus();
+                }
+
+                regex =/[a-zA-Z0-9]$/;
+                if(password!=cpassword || !regex.test(password))
+                {
+                    alert("password should be only alpha numeric ");
+                    password.focus();
+                }
+            }
+        </script>
+    </body>
+</html>

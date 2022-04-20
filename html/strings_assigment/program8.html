@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>pizza form</title>
+    </head>
+    <body>
+        <form onsubmit = "return myfunction()">
+                Quantity : <input type = "number" id = "qtn"><br>
+                small : <input type = "radio" name = "small" id = "sm"><br>
+                large : <input type = "radio" name = "small" id = "lr"><br>
+                cheese : <input type = "checkbox" name = "cheese" id = "ch" value="cheese"><br>
+                Olives : <input type = "checkbox"  name = "Olives" id = "oli" value = "Olives"><br>
+                Onions : <input type = "checkbox" name =  "Onions" id = "oni" value = "onions"><br>  
+                <input type = "submit" name="submit" value = "submit" ><br>
+                <textarea id = "ans" rows = "10" cols = "30">your ans is </textarea>
+        </form>
+        <script>
+            function myfunction(){
+                console.log("hare bol");
+                var sum = 0;
+                var q = document.getElementById("qtn").value;
+                var sm = document.querySelector('input[name = "small"]:checked');
+                if(sm!=null)
+                {
+                    sum += 70;
+                    alert("small is selected");
+                }
+                var lr = document.querySelector('input[name="large"]:checked');
+                if(lr!=null)
+                {
+                    sum += 90;
+                    alert("large is selected");
+                }
+                var cheese = document.querySelector('input[name="cheese"]:checked');
+                if(cheese!=null)
+                {
+                    sum +=50;
+                    alert("cheese are selected");   
+                }
+                var Olives = document.querySelector('input[name="Olives"]:checked');
+                if(Olives!=null)
+                {
+                    sum +=70;
+                    alert("olives are selected");
+                }
+                var Onions = document.querySelector('input[name="Onions"]:checked');
+                if(Onions!=null)
+                {
+                    sum += 90;
+                    alert("Onions are selected");
+                }
+                // console.log(Olives.checked);
+
+                // if(Olives.checked == true)
+                // {
+                //     alert("olives selected");
+                // }
+                // var onions = document.getElementById("Onions");
+                // if(onions.checked == true)
+                // {
+                //     alert("onions selected");
+                // }
+                // var cheese = document.getElementById("cheese");
+                // if(cheese.checked == true)
+                // {
+                //     alert("cheese selected ");
+                // }
+                alert("Your total is " + sum*q);
+            }
+
+        </script>
+    </body>
+</html>

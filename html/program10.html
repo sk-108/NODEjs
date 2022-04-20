@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>text growing problem</title>
+    </head>
+    <body>
+        <p id = "pid" style = "font-size : 10pt; color :red;">TEXT GROWING</p>
+        <button onclick = "start()">Start</button>
+        <script>
+            function start()
+            {
+                let p = document.getElementById("pid");
+                var n = 10;
+                var s = "10pt";
+                var k = setInterval(grow,1000);
+                console.log(p); 
+
+            function grow() 
+            {
+                p.style.fontsize = s;
+                console.log(p.style.fontsize);
+                n = n+10;
+                s = n+"pt";
+                // console.log(s);
+                if(n  == 100){
+                    p.style.color = "blue";
+                    clearInterval(k);
+                    return;
+                } 
+            }
+        }
+        </script>
+    </body>
+</html>

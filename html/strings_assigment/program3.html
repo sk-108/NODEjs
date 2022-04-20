@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>convert to title case </title>
+    </head>
+    <body>
+        input string : <input id = "str" type = "text" ><br>
+        <button id = "btn" onclick = "sourav()">convert</button>
+        <script>
+            function sourav()
+            {
+                var s = document.getElementById("str").value;
+                console.log(s);
+                var arr = s.split(' ');
+                console.log(arr);
+
+                var res = [];
+
+                for(var i=0;i<arr.length;i++){
+                    res.push(arr[i][0].toUpperCase() + arr[i].slice(1,arr[i].length));
+                };
+            console.log(res);
+
+            }
+
+                    </script>
+    </body>
+</html>

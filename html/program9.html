@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>range 0 to 999</title>
+    </head>
+    <body>
+        enter the no : <input type="number" id = "no"><br>
+        <button id = "btn" onclick="sourav();"> convert</button>
+        <p id = "output ">sdklfj</p>
+        <script>
+            function check(a)
+            {
+                if(a==1)return "one";
+                if(a==2)return "two";
+            }
+            function sourav()
+            {
+                var n = document.getElementById("no").value;
+                var arr = "";
+                while(n!=0)
+                {
+                    var b = n%10;
+                    var s = check(b);
+                    
+                    arr = arr+s;
+                    n = parseInt(n/10);
+                    console.log(n);
+                }
+                var a = arr.split("");
+                a  = a.reverse();
+                arr = a.join("");
+                console.log(arr);
+                
+            }
+        </script>
+    </body>
+</html>

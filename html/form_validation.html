@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Sourav Form</title>
+    </head>
+    <body>
+        <h1>sourav form</h1>
+        <form onsubmit="return myfunction()">
+             Name : <input type = "text" id = "name" value = ""><br>
+             Phone no : <input type = "text"  id = "no" value = ""><br>
+             email : <input type = "text"  id = "email" value = ""><br>
+             pass : <input type = "password"  id = "pass" value = ""><br>
+             cpass : <input type = "password"  id = "cpass" value = ""><br>
+             <input type = "submit" value="subm" id="">
+        </form>
+        <script>
+            function myfunction()
+            {
+                console.log("hari bol");
+                let phone = document.getElementById("no").value;
+                let email  = document.getElementById("email").value;
+                let name = document.getElementById("name").value;
+                let pass = document.getElementById("pass").value;
+                let cpass = document.getElementById("cpass").value;
+                console.log(name);
+                let regex = /[a-zA-Z]$/;
+                if(name ==  "" || !regex.test(name))
+                {
+                    alert("enter the valid name ");
+                    name.focus();
+                    return false;
+                }
+
+                regex = /[0-9]{10}$/;
+                if(phone == "" || !regex.test(phone))
+                {
+                    alert("enter valid phone no ");
+                    phone.focus();
+                    return false;
+                }
+                regex = /\S+\@+\S+\.+\S/;
+                if(email == "" || !regex.test(email))
+                {
+                    alert("enter valid email ");
+                    email.focus();
+                    return  false;
+                }
+
+                if(pass!= cpass)
+                {
+                    alert("password does not match ");
+                    password.focus();
+                    return false;
+                }
+                console.log("hari bol");
+
+                return true;
+                }
+        </script>
+    </body>
+</html>

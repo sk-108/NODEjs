@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <tilte>evil no </tilte>
+    </head>
+    <body>
+        enter no : <input id = "no" type = "number" >
+        <button id = "btn" onclick="return sourav()" >find</button>
+        <script>
+            function sourav()
+            {
+                var n = document.getElementById("no").value;
+                var t =  parseInt(n);
+                var count = 0;
+                var str = "";
+                // console.log(t);
+                while(t!=0)
+                {
+                    var b = (t%2);
+                    if(b == 1){
+                        str = str + "1";
+                        count++;
+                    }
+                    else str = str + "1";
+                    t = parseInt(t/2);
+                    console.log(t);
+                }
+                console.log(str);
+                console.log(count);
+                if(count%2==0)console.log("evil no ");
+                else {
+                    console.log("not a evil no ");
+                }
+            }
+        </script>
+    </body>
+</html>
